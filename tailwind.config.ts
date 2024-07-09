@@ -13,6 +13,21 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      backgroundColor: {
+       "header-button-1": "#FFFFFF",
+       "header-button-2": "#C6C7F8",
+       "card-bg-color": "#222222",
+       "input-bg-color": "#7166661f",
+       "apple_google-bg-color": "#8581811f",
+       
+      
+      },
+      colors: {
+         "card_text_color":"#b7b3b3ba",
+         "blue_text_color":"#95A4FC",
+         "apple_google_border_color": "#716666",
+        
+      }
     },
   },
   plugins: [],
