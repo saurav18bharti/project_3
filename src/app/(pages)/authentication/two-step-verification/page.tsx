@@ -2,34 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-
 const Twostepverification = () => {
   return (
-    <div className="signin_container bg-card-bg-color flex flex-col justify-center items-center gap-7 lg:gap-8 xl:gap-12 2xl:gap-10 m-4 md:my-16 rounded-3xl py-9 md:max-w-[521px] lg:max-w-[579px] xl:max-w-[789px] md:mx-auto md:p-20 2xl:p-16   ">
-      <div className="flex flex-col gap-6" >
-        <div className="flex flex-col justify-center items-center gap-2 xl:gap-4">
-          <h1 className="text-lg md:text-xl xl:text-3xl 2xl:text-2xl font-semibold text-white">Sign In</h1>
-          <h3 className="text-xs md:text-sm xl:text-lg 2xl:text-sm text-card_text_color opacity-70">Your Social Campaigns</h3>
-        </div>
-        <div className="flex justify-center items-center gap-3 md:gap-4 xl:gap-6 ">
-          <div className="google p-1 bg-apple_google-bg-color border border-apple_google_border_color border-opacity-40  rounded-2xl shadow-border shadow-inner md:flex md:justify-self-center md:items-center md:gap-1 xl:gap-3 md:p-2 md:px-4 xl:px-5 2xl:px-6"><Image src="/signin/apple.svg" alt="apple" width={10} height={10} className="h-6 w-6 md:h-5 xl:h-8 xl:w-8 2xl:h-7 2xl:w-7 " /><p className="hidden md:block md:text-xs xl:text-lg 2xl:text-sm md:text-white ">Sign in with Apple</p> </div>
-          <div className="apple p-1 bg-apple_google-bg-color  border border-apple_google_border_color border-opacity-40 rounded-2xl shadow-border shadow-inner md:flex md:justify-self-center md:items-center md:gap-1 xl:gap-3 md:p-2 md:px-4 lg:px-3 2xl:px-5"><Image src="/signin/google.svg" alt="google" width={10} height={10} className="h-6 w-6 md:h-5 xl:h-8 xl:w-8 2xl:h-7 2xl:w-7" /><p className="hidden md:block md:text-xs xl:text-lg 2xl:text-sm md:text-white">Sign in with Google</p></div>
-        </div>
+    <div className="signin_container bg-card-bg-color flex flex-col justify-center items-center gap-8  rounded-3xl p-16 max-w-[789px] mx-4 my-24 md:m-24 lg:mx-auto    ">
+      <div className="flex flex-col justify-center items-center gap-8 w-full min-w-52">
+      <div className="relative h-14 w-10 md:h-14 md:w-24">
+        <Image
+          src="/two-step-verification/mobile.svg"
+          alt="two-step-verification"
+          fill
+          className="object-contain"
+        />
       </div>
-      <div className="flex justify-center items-center w-full gap-3">
-        <div className="empty_border border border-gray-700 opacity-40 border-t-1 border-b-0 w-[16%] md:w-[34%] lg:w-[27%] xl:w-[29%] 2xl:w-[25%]"></div>
-        <p className="text-xs lg:text-sm xl:text-lg 2xl:text-sm text-card_text_color opacity-70 font-normal">Or with Email</p>
-        <div className="empty_border border border-gray-700 opacity-40 border-header-button-2 border-t-1 border-b-0 w-[16%] md:w-[34%] lg:w-[27%] xl:w-[29%]  2xl:w-[25%]"></div>
-      </div>
-      <div className="flex flex-col justify-center items-center gap-5 xl:gap-10 md:w-[353px] xl:w-[513px] 2xl:w-[454px]">
-        <div className="flex flex-col gap-3 xl:gap-5 w-full">
+      <div className="flex flex-col justify-center items-center gap-2 ">
+        <h1 className="text-white font-semibold text-lg md:text-xl">Two Step Verification</h1>
+        <p className="text-[12px] md:text-xs text-card_text_color">Enter the verification code we sent to</p>
+      </div>  
 
-        <input type="text" placeholder="Email" className="text-sm xl:text-lg 2xl:text-sm py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-2xl outline-none text-white placeholder-card_text_color  bg-input-bg-color" />
-        <input type="text" placeholder="Password" className="text-sm xl:text-lg 2xl:text-sm py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-2xl bg-input-bg-color text-white placeholder-card_text_color outline-none "/>
-        <h4 className="text-blue_text_color text-xs xl:text-lg  2xl:text-sm font-normal text-end">Forgot Password?</h4>
-        </div >
-        <button className="text-sm xl:text-lg 2xl:text-sm bg-header-button-2 py-2 md:py-3 w-full rounded-2xl">Sign In</button>
-        <div className=" flex justify-center items-center gap-1 md:gap-2   "><p className="text-[12px] md:text-sm xl:text-lg 2xl:text-sm text-card_text_color opacity-80 font-normal">Not a Member yet?</p><Link href="/authentication/signup"><span className="text-xs xl:text-lg 2xl:text-sm text-blue_text_color">Sign Up</span></Link></div>
+      </div>
+      <h2 className="text-white text-xl">+91 123 456 789</h2>
+      <div className="flex flex-col justify-center items-center gap-5  w-full min-w-52">
+        <h4 className="text-xs md:text-sm font-semibold text-white">Type your 4 digit security code</h4>
+        <div className="flex justify-center items-center gap-3 ">
+          <input type="text" className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white" /> <input type="text"  className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white" /> <input type="text"  className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white"/> <input type="text"  className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white"/>
+        </div>
+        <Link href="/authentication/setup-new-password"><button className="text-sm bg-header-button-2 py-2   max-w-sm min-w-72 w-full rounded-xl">submit</button></Link>
+        <p className="text-[13px] md:text-sm text-card_text_color">Didn&apos;t get the code ? <span className="text-blue_text_color ">Resend</span> or <span className="text-blue_text_color">Call Us</span></p>
       </div>
     </div>
   );

@@ -2,16 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+html {
+}
 body {
- background: #222222f3 ;
- 
+  background: #222222f3;
+  max-width: 100vw;
+  min-height: 100vh;
 }
-:root{
-  --header-button-1-color:#FFFFFF;
-  --header-button-2-color:#C6C7F8;
+:root {
+  --header-button-1-color: #ffffff;
+  --header-button-2-color: #c6c7f8;
 }
+

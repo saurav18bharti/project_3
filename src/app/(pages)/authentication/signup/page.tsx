@@ -6,7 +6,7 @@ import { GoEyeClosed } from "react-icons/go";
 
 const SignUp = () => {
   return (
-    <div className="signin_container bg-card-bg-color flex flex-col justify-center items-center gap-7 lg:gap-8 xl:gap-12 2xl:gap-8 m-4 md:my-16 rounded-3xl py-12 px-6 md:max-w-[521px] lg:max-w-[579px] xl:max-w-[789px] md:mx-auto md:p-20 2xl:p-16  ">
+    <div className="signin_container bg-card-bg-color flex flex-col justify-center items-center gap-7 lg:gap-8 xl:gap-12 2xl:gap-8 m-4 md:mt-16 rounded-3xl py-12 px-6 md:max-w-[521px] lg:max-w-[579px] xl:max-w-[789px] md:mx-auto md:p-20 2xl:p-16  ">
       <div className="flex flex-col gap-6 2xl:gap-4" >
         <div className="flex flex-col justify-center items-center gap-2 xl:gap-4">
           <h1 className="text-lg md:text-xl xl:text-3xl 2xl:text-2xl font-semibold text-white">Sign Up</h1>
@@ -26,7 +26,20 @@ const SignUp = () => {
         <div className="flex flex-col gap-5 xl:gap-5 w-full">
 
         <input type="text" placeholder="Email" className="text-sm xl:text-lg 2xl:text-sm py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color opacity-50  rounded-2xl outline-none text-white placeholder-card_text_color  bg-input-bg-color" />
-        <input type="text" placeholder="Password" className="text-sm xl:text-lg 2xl:text-sm py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color opacity-50  rounded-2xl bg-input-bg-color text-white placeholder-card_text_color outline-none "/>
+        <div>
+        <input type="text" placeholder="Password" className="text-sm w-full xl:text-lg 2xl:text-sm py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color opacity-50  rounded-2xl bg-input-bg-color text-white placeholder-card_text_color outline-none "/>
+         <div className='flex gap-3 justify-center items-center mt-4'>
+            <div className='w-1/3 h-1  rounded-md bg-input-bg-color'></div>
+            <div className='w-1/3 h-1  rounded-md bg-input-bg-color'></div>
+            <div className='w-1/3 h-1  rounded-md bg-input-bg-color'></div>
+            <div className='w-1/3 h-1  rounded-md bg-input-bg-color'></div>
+   
+      
+           
+           
+        </div>
+
+        </div>
         <p className="text-xs md:text-sm xl:text-lg 2xl:text-sm text-card_text_color opacity-80 font-normal">Use 8 or more characters with a mix of letters, numbers & symbols.</p>
         <input type="text" placeholder="Repeat Password" className="text-sm xl:text-lg 2xl:text-sm py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color opacity-50  rounded-2xl bg-input-bg-color text-white placeholder-card_text_color outline-none "/>
         <div className="flex justify-start items-center gap-3">
