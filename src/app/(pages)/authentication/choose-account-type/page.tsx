@@ -4,27 +4,9 @@ import Link from 'next/link';
 import React from 'react'
 import { VscAccount } from "react-icons/vsc";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import CustomRadio from '@/app/component/CustomRadio';
 
-export const CustomRadio = (props:any) => {
-    const {children, ...otherProps} = props;
-  
-    return (
-      <Radio
-        {...otherProps}
-        classNames={{
-          base: cn(
-            "inline-flex m-0 bg-content1  items-center justify-between",
-            "flex-row-reverse max-w-[750px] cursor-pointer rounded-2xl gap-4 p-5 border-2 border-transparent",
-            "data-[selected=true]:border-violet-200 border-opacity-10 bg-input-bg-color"
-          ),
-          description:"ml-10 text-[12px] md:text-sm"
-          
-        }}
-      >
-        {children}
-      </Radio>
-    );
-  };
+
 const ChooseAccountType = () => {
 
   return (
