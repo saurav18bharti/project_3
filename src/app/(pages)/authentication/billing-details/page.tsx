@@ -5,6 +5,8 @@ import Link from "next/link";
 import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
+import { cn } from "@/utils/helpers";
+import { app_style } from "@/utils/constant";
 
 const BillingDetails = () => {
   const animals = [
@@ -24,7 +26,7 @@ const BillingDetails = () => {
   ];
 
   return (
-    <div className="bg-card-bg-color flex flex-col justify-center items-center gap-8 rounded-3xl px-16 py-16 max-w-[789px] mx-4 my-16 md:m-16 lg:mx-auto">
+    <div className={cn(app_style,"mx-4 my-16 md:m-16")}>
       <div className="max-w-[28rem]">
         <div className="flex flex-col justify-center items-center gap-2">
           <h1 className="text-lg md:text-xl xl:text-3xl 2xl:text-2xl font-semibold text-white">

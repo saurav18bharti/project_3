@@ -1,10 +1,12 @@
 "use client";
+import { app_style } from "@/utils/constant";
+import { cn } from "@/utils/helpers";
 import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
-
+// p-32  max-w-[789px] mx-4 my-24 md:m-24
 const ForgotPassword = () => {
   return (
-    <div className="bg-card-bg-color flex flex-col justify-center items-center gap-8 rounded-3xl p-32  max-w-[789px] mx-4 my-24 md:m-24 lg:mx-auto">
+    <div className={cn(app_style, "p-32 my-24 md:m-24")}>
       <div className="max-w-[23rem] w-full flex flex-col gap-5">
         <div className="flex flex-col justify-center items-center gap-2">
           <h1 className="text-lg md:text-xl xl:text-3xl 2xl:text-2xl font-semibold text-white">

@@ -1,4 +1,4 @@
-import { cn, Radio, RadioGroup } from "@nextui-org/react";
+import {  Radio, RadioGroup } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
@@ -6,10 +6,12 @@ import { VscAccount } from "react-icons/vsc";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
 import CustomRadio from "@/app/component/CustomRadio";
+import { app_style } from "@/utils/constant";
+import { cn } from "@/utils/helpers";
 
 export default function AccountInfo() {
   return (
-    <div className="bg-card-bg-color flex flex-col justify-center items-center gap-8 rounded-3xl px-16 p-16 max-w-[789px] mx-4 my-24 md:m-12 lg:mx-auto">
+    <div className={cn(app_style , "my-8") }>
       <div className="max-w-[28rem]">
         <div className="flex flex-col justify-center items-center gap-2">
           <h1 className="text-lg md:text-xl xl:text-3xl 2xl:text-2xl font-semibold text-white">

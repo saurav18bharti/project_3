@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
-import { RadioGroup, Radio, cn, RadioProps } from "@nextui-org/react";
+import { RadioGroup, Radio, RadioProps } from "@nextui-org/react";
+import { cn } from "@/utils/helpers";
 
 const CustomRadio = (props: RadioProps) => {
   const { children, ...otherProps } = props;
@@ -10,10 +11,11 @@ const CustomRadio = (props: RadioProps) => {
       {...otherProps}
       classNames={{
         base: cn(
-          "inline-flex m-0 bg-content1 hover:bg-content2 items-center justify-between",
-          "flex-row-reverse max-w-[300px] cursor-pointer rounded-lg gap-4 p-4 border-2 border-transparent",
-          "data-[selected=true]:border-primary"
+         "inline-flex m-0 bg-content1 items-center justify-between",
+          "flex-row-reverse max-w-[750px] cursor-pointer rounded-2xl gap-4 p-3 border-2 border-transparent",
+          "data-[selected=true]:border-violet-200 border-opacity-10 bg-input-bg-color"
         ),
+      description: "ml-10 text-sm",
       }}
     >
       {children}
