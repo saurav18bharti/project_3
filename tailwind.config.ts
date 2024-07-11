@@ -28,6 +28,7 @@ const config: Config = {
          "card_text_color":"#b7b3b3ba",
          "blue_text_color":"#95A4FC",
          "apple_google_border_color": "#716666",
+         
         
       }
     },

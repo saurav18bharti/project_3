@@ -27,13 +27,13 @@ const BillingDetailsCard = () => {
   // p-16  mx-4 my-24 md:mx-24 md:my-12
 
   return (
-    <div className={cn(app_style ,"p-16 my-24 md:mx-24 md:my-12")}>
-      <div className="max-w-[28rem] flex flex-col gap-8">
+    <div className={cn(app_style ," py-9 sm:py-16 mx-4 md:mx-16 my-10 lg:mx-auto" )}>
+      <div className="max-w-[28rem] flex flex-col gap-8 px-6 md:p-0">
         <div className="flex flex-col justify-center items-center gap-2">
-          <h1 className="text-lg md:text-xl xl:text-3xl 2xl:text-2xl font-semibold text-white">
+          <h1 className="text-lg md:text-xl xl:text-2xl font-semibold text-white">
             Billing Details
           </h1>
-          <h3 className="text-xs md:text-sm text-card_text_color opacity-70">
+          <h3 className="text-sm text-center md:text-balance text-card_text_color opacity-70">
             If you need more info, please check out Help Page.
           </h3>
         </div>
@@ -84,8 +84,8 @@ const BillingDetailsCard = () => {
           </div>
         </div>
 
-        <div className="w-full flex justify-between items-center mt-4 ">
-            <div className="max-w-[58%]">
+        <div className="w-full flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-center mt-4 ">
+            <div className="  text-center md:text-start w-full md:max-w-[58%]">
                 <h1 className="text-white text-sm">Save Card for further billing?</h1>
                 <p className="text-[12px] text-card_text_color">If you need more info, please check budget planning.</p>
                 </div>

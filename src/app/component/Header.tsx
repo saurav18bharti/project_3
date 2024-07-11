@@ -9,7 +9,7 @@ const Header = () => {
       <div className=" flex justify-between items-center p-4 md:px-6">
         {/* First Section: Company Logo and Name */}
         <div className="flex items-center ">
-          <Image src="/logo.svg" alt="Company Logo" width={40}  height={40} className="h-4 w-20 lg:w-24 lg:h-6 xl:w-28 xl:h-8" />
+          <Image src="/logo.svg" alt="Company Logo" width={40}  height={40} className="h-6 w-20 lg:w-24 lg:h-7 xl:w-28 xl:h-8" />
           
           
         </div>

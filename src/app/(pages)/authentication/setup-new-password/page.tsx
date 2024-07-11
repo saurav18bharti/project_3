@@ -1,9 +1,14 @@
+import Button from '@/app/component/Button'
+import { app_style, max_width_content } from '@/utils/constant'
+import { cn } from '@/utils/helpers'
 import Link from 'next/link'
 import React from 'react'
 
 const Setupnewpassword = () => {
   return (
-    <div className=' bg-card-bg-color flex flex-col justify-center items-center gap-8  rounded-3xl p-32 max-w-[789px] mx-4 my-24 md:m-24 lg:mx-auto'>
+    <div className={cn(app_style ,"  py-9 sm:py-[10.3rem] mx-4 md:mx-16 my-12 lg:mx-auto")}>
+        <div className={ cn(max_width_content ,"flex flex-col justify-center items-center gap-4 px-8 md:px-0")}>
+
         <div className='min-w-64 flex flex-col justify-center items-center gap-2'>
             <h1 className='text-2xl text-white font-semibold'>Setup new password</h1>
             <p className='text-sm text-card_text_color text-center md:text-balance'>Have you already reset the password ? <span className='text-blue_text_color'> Sign in</span></p>
@@ -30,8 +35,9 @@ const Setupnewpassword = () => {
         <input type="checkbox" className="bg-card-bg-color p-3 rounded-md" />
         <p className="text-card_text_color text-sm ">I Accept the <span className="text-blue_text_color ">Terms</span></p>
         </div>
-        
-        <Link href="/authentication/choose-account-type"><button className="text-sm bg-header-button-2 py-2   max-w-2xl min-w-72 w-full rounded-xl mt-4">submit</button></Link>
+   
+        <Link href="/authentication/choose-account-type"><Button props='Submit' style='max-w-2xl min-w-72'/></Link>
+        </div>
         </div>
       
     </div>

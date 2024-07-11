@@ -26,13 +26,13 @@ const BillingDetails = () => {
   ];
 
   return (
-    <div className={cn(app_style,"mx-4 my-16 md:m-16")}>
-      <div className="max-w-[28rem]">
+    <div className={cn(app_style ," py-9 sm:py-16 mx-4 md:mx-16 my-10 lg:mx-auto")}>
+      <div className="max-w-[28rem] w-full px-4 md:p-0">
         <div className="flex flex-col justify-center items-center gap-2">
-          <h1 className="text-lg md:text-xl xl:text-3xl 2xl:text-2xl font-semibold text-white">
+          <h1 className="text-lg md:text-xl xl:text-2xl font-semibold text-white">
             Billing Details
           </h1>
-          <h3 className="text-xs md:text-sm text-card_text_color opacity-70">
+          <h3 className="text-sm text-center md:text-balance text-card_text_color opacity-70">
             If you need more info, please check out Help Page.
           </h3>
         </div>
@@ -63,8 +63,8 @@ const BillingDetails = () => {
               label="Corporation Type"
               placeholder="Select "
               labelPlacement="outside"
-              className="max-w-xs bg-input-bg-color"
-              classNames={{ label: "!text-white font-semibold"}}
+              className=" text-black"
+              classNames={{ label: "!text-white font-semibold" }}
             >
               {animals.map((animal) => (
                 <SelectItem key={animal.key}>{animal.label}</SelectItem>
