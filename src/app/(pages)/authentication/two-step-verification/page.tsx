@@ -46,19 +46,19 @@ const Twostepverification = () => {
           <div className="flex justify-center items-center gap-3 ">
             <input
               type="text"
-              className={otp_style}
+              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white"
             />{" "}
             <input
               type="text"
-              className={otp_style}
+              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white"
             />{" "}
             <input
               type="text"
-              className={otp_style}
+              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white"
             />{" "}
             <input
               type="text"
-              className={otp_style}
+              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white"
             />
           </div>
 
