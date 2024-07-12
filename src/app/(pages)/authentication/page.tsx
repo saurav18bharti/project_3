@@ -1,6 +1,7 @@
 import Image from "next/image";
-import SignIn from "./authentication/signin/page";
+
 import { NextUIProvider } from "@nextui-org/react";
+import SignIn from "./signin/page";
 
 
 

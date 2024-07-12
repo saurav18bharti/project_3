@@ -7,6 +7,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
 import { app_style } from "@/utils/constant";
 import { cn } from "@/utils/helpers";
+import { PreContinueButton } from "@/app/component/Button";
 
 const BillingDetailsCard = () => {
   const animals = [
@@ -42,7 +43,7 @@ const BillingDetailsCard = () => {
           <h1 className="font-semibold text-white text-sm">Name on Card</h1>
           <input
             type="text"
-            className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none"
+            className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black"
             placeholder="Enter the name on card"
           />
         </div>
@@ -51,7 +52,7 @@ const BillingDetailsCard = () => {
           <h1 className="font-semibold text-white text-sm">Card Number</h1>
           <input
             type="text"
-            className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none"
+            className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black"
             placeholder="Enter the card number"
           />
         </div>
@@ -64,12 +65,12 @@ const BillingDetailsCard = () => {
             <div className="flex gap-2">
               <input
                 type="text"
-                className="text-xs w-2/3 py-3 px-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none"
+                className="text-xs w-2/3 py-3 px-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black"
                 placeholder="Month"
               />
               <input
                 type="text"
-                className="text-xs w-2/3 py-3    px-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none"
+                className="text-xs w-2/3 py-3    px-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black"
                 placeholder="Year"
               />
             </div>
@@ -78,7 +79,7 @@ const BillingDetailsCard = () => {
             <h1 className="font-semibold text-white text-sm">CVV</h1>
             <input
               type="text"
-              className="text-xs w-full py-3 px-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none"
+              className="text-xs w-full py-3 px-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black"
               placeholder="CVV"
             />
           </div>
@@ -91,24 +92,12 @@ const BillingDetailsCard = () => {
                 </div>
                 <div className="flex justify-center items-center gap-2">
                     <p className="text-[12px] text-card_text_color">Save Card</p>
-                    <Switch size="sm" className="h-4" defaultSelected color="default"></Switch>
+                    <Switch size="sm" color="primary" className="h-4 " defaultSelected ></Switch>
                 </div>
 
         </div>
 
-        <div className="flex gap-3 justify-center items-center w-full">
-          <Link href="/authentication/billing-details" className="w-full">
-            <button className="text-sm bg-input-bg-color py-2 max-w-2xl min-w-28 w-full rounded-xl mt-6 flex justify-center items-center gap-1 text-white">
-              <IoIosArrowBack className="h-4 w-5 text-gray-500" />
-              Previous
-            </button>
-          </Link>
-          <Link href="/authentication/forgot-password" className="w-full">
-            <button className="text-sm bg-header-button-2 py-2 max-w-2xl min-w-28 w-full rounded-xl mt-6 flex justify-center items-center gap-1">
-              Submit <MdKeyboardArrowRight className="h-5 w-5 text-gray-500" />
-            </button>
-          </Link>
-        </div>
+        <PreContinueButton  onContinue="/authentication/forgot-password" previous="/authentication/billing-details"/>
       </div>
     </div>
   );

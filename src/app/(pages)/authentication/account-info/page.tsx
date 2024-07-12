@@ -6,12 +6,13 @@ import { VscAccount } from "react-icons/vsc";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
 import CustomRadio from "@/app/component/CustomRadio";
-import { app_style } from "@/utils/constant";
+import { account_info_specify_team, app_style } from "@/utils/constant";
 import { cn } from "@/utils/helpers";
+import { PreContinueButton } from "@/app/component/Button";
 
 export default function AccountInfo() {
   return (
-    <div className={cn(app_style ," py-9 sm:py-16 mx-4 md:mx-16 my-10 lg:mx-auto") }>
+    <div className={cn(app_style ," py-9 sm:py-12 mx-4 md:mx-16 my-10 lg:mx-auto") }>
       <div className="max-w-[28rem]">
         <div className="flex flex-col justify-center items-center gap-2">
           <h1 className="text-lg md:text-xl xl:text-3xl 2xl:text-2xl font-semibold text-white">
@@ -29,16 +30,16 @@ export default function AccountInfo() {
               Specify Team Size
             </h1>
             <div className="flex gap-3 text-white font-normal text-sm">
-              <p className="border bg-opacity-40 border-apple_google_border_color border-opacity-40 py-2 px-9 bg-input-bg-color rounded-lg text-white text-nowrap">
+              <p className={account_info_specify_team}>
                 1-1
               </p>
-              <p className="border bg-opacity-40 border-apple_google_border_color border-opacity-40 py-2 px-9 bg-input-bg-color rounded-lg text-white text-nowrap">
+              <p className={account_info_specify_team}>
                 2-10
               </p>
-              <p className="border bg-opacity-40 border-apple_google_border_color border-opacity-40 py-2 px-9 bg-input-bg-color rounded-lg text-white text-nowrap">
+              <p className={account_info_specify_team}>
                 10-15
               </p>
-              <p className="border bg-opacity-40 border-apple_google_border_color border-opacity-40 py-2 px-9 bg-input-bg-color rounded-lg text-white text-nowrap">
+              <p className={account_info_specify_team}>
                 50+
               </p>
             </div>
@@ -53,7 +54,7 @@ export default function AccountInfo() {
             </h1>
             <input
               type="text"
-              className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none"
+              className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-md shadow-black"
             />
           </div>
         </div>
@@ -91,20 +92,7 @@ export default function AccountInfo() {
           </RadioGroup>
         </div>
 
-        <div className="flex gap-3 justify-center items-center w-full">
-          <Link href="/authentication/choose-account-type" className="w-full">
-            <button className="text-sm bg-input-bg-color py-2 max-w-2xl min-w-28 w-full rounded-xl mt-6 flex justify-center items-center gap-1 text-white">
-              <IoIosArrowBack className="h-4 w-5 text-gray-500" />
-              Previous
-            </button>
-          </Link>
-          <Link href="/authentication/billing-details" className="w-full">
-            <button className="text-sm bg-header-button-2 py-2 max-w-2xl min-w-28 w-full rounded-xl mt-6 flex justify-center items-center gap-1">
-              Continue{" "}
-              <MdKeyboardArrowRight className="h-5 w-5 text-gray-500" />
-            </button>
-          </Link>
-        </div>
+        <PreContinueButton onContinue="/authentication/billing-details" previous="/authentication/choose-account-type"/>
       </div>
     </div>
   );

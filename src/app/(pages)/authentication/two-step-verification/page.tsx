@@ -1,4 +1,4 @@
-import Button from "@/app/component/Button";
+import {Button} from "@/app/component/Button";
 import { app_style, max_width_content, otp_style } from "@/utils/constant";
 import { cn } from "@/utils/helpers";
 import Image from "next/image";
@@ -46,19 +46,19 @@ const Twostepverification = () => {
           <div className="flex justify-center items-center gap-3 ">
             <input
               type="text"
-              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white"
+              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white outline-none hover:outline-gray-500  "
             />{" "}
             <input
               type="text"
-              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white"
+              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white outline-none hover:outline-gray-500"
             />{" "}
             <input
               type="text"
-              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white"
+              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white outline-none hover:outline-gray-500"
             />{" "}
             <input
               type="text"
-              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white"
+              className="max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white outline-none hover:outline-gray-500"
             />
           </div>
 

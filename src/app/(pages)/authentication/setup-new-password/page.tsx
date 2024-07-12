@@ -1,4 +1,4 @@
-import Button from '@/app/component/Button'
+import {Button} from '@/app/component/Button'
 import { app_style, max_width_content } from '@/utils/constant'
 import { cn } from '@/utils/helpers'
 import Link from 'next/link'
@@ -15,7 +15,7 @@ const Setupnewpassword = () => {
         </div>
         <div className='flex flex-col gap-5'>
             <div>
-        <input type="text" placeholder="Password" className="text-sm w-full   py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-xl outline-none text-white placeholder-card_text_color  bg-input-bg-color" />
+        <input type="text" placeholder="Password" className="text-sm w-full   py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-xl outline-none text-white placeholder-card_text_color  bg-input-bg-color shadow-sm shadow-black" />
         <div className='flex gap-3 justify-center items-center mt-4'>
             <div className='w-1/3 h-1  rounded-md bg-input-bg-color'></div>
             <div className='w-1/3 h-1  rounded-md bg-input-bg-color'></div>
@@ -29,7 +29,7 @@ const Setupnewpassword = () => {
                 
             </div>
         <p className="text-[12px] md:text-sm  text-card_text_color opacity-80 font-normal">Use 8 or more characters with a mix of letters, numbers & symbols.</p>
-        <input type="text" placeholder="Repeat Password" className="text-sm w-full min-w-64   py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color opacity-50  rounded-xl bg-input-bg-color text-white placeholder-card_text_color outline-none "/>
+        <input type="text" placeholder="Repeat Password" className="text-sm w-full min-w-64   py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color bg-opacity-50  rounded-xl bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black "/>
         <div className="flex justify-start items-center gap-4">
 
         <input type="checkbox" className="bg-card-bg-color p-3 rounded-md" />

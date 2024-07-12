@@ -8,12 +8,12 @@ const Input = () => {
       <input
         type="text"
         placeholder="Email"
-        className={cn(input_style)}
+        className={input_style}
       />
       <input
         type="text"
         placeholder="Password"
-        className={cn(input_style)}
+        className={input_style}
       />
     </>
   );

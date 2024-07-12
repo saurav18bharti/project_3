@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/app/component/Button";
+import {Button} from "@/app/component/Button";
 import { app_style } from "@/utils/constant";
 import { cn } from "@/utils/helpers";
 import React from "react";
@@ -22,7 +22,7 @@ const ForgotPassword = () => {
           <div className="w-full flex flex-col gap-2">
             <input
               type="email"
-              className="text-xs w-full py-3 px-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none"
+              className="text-xs w-full py-3 px-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black"
               placeholder="Please enter your email address"
             />
           </div>
@@ -35,7 +35,7 @@ const ForgotPassword = () => {
           <button
             type="button"
             onClick={() => window.history.back()}
-            className="text-sm text-blue_text_color "
+            className="text-sm text-blue_text_color hover:text-white  "
           >
             Back
           </button>

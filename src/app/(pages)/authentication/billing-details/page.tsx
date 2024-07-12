@@ -7,6 +7,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
 import { cn } from "@/utils/helpers";
 import { app_style } from "@/utils/constant";
+import { PreContinueButton } from "@/app/component/Button";
 
 const BillingDetails = () => {
   const animals = [
@@ -42,7 +43,7 @@ const BillingDetails = () => {
             <h1 className="font-semibold text-white text-sm">Business Name</h1>
             <input
               type="text"
-              className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none"
+              className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black  "
               placeholder="Enter your business name"
             />
           </div>
@@ -53,7 +54,7 @@ const BillingDetails = () => {
             </h1>
             <input
               type="text"
-              className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none"
+              className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black"
               placeholder="Enter a shortened descriptor"
             />
           </div>
@@ -63,7 +64,7 @@ const BillingDetails = () => {
               label="Corporation Type"
               placeholder="Select "
               labelPlacement="outside"
-              className=" text-black"
+              className=" text-black shadow-sm shadow-black rounded-md"
               classNames={{ label: "!text-white font-semibold" }}
             >
               {animals.map((animal) => (
@@ -77,7 +78,7 @@ const BillingDetails = () => {
               Business Description
             </h1>
             <textarea
-              className="text-xs w-full min-w-64 py-2 px-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none"
+              className="text-xs w-full min-w-64 py-2 px-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black"
               placeholder="Enter your business description"
             />
           </div>
@@ -86,26 +87,13 @@ const BillingDetails = () => {
             <h1 className="font-semibold text-white text-sm">Contact Email</h1>
             <input
               type="email"
-              className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none"
+              className="text-xs w-full min-w-64 py-3 px-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-lg bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black"
               placeholder="Enter your contact email"
             />
           </div>
         </div>
 
-        <div className="flex gap-3 justify-center items-center w-full">
-          <Link href="/authentication/account-info" className="w-full">
-            <button className="text-sm bg-input-bg-color py-2 max-w-2xl min-w-28 w-full rounded-xl mt-6 flex justify-center items-center gap-1 text-white">
-              <IoIosArrowBack className="h-4 w-5 text-gray-500" />
-              Previous
-            </button>
-          </Link>
-          <Link href="/authentication/billing-detail-card" className="w-full">
-            <button className="text-sm bg-header-button-2 py-2 max-w-2xl min-w-28 w-full rounded-xl mt-6 flex justify-center items-center gap-1">
-              Continue{" "}
-              <MdKeyboardArrowRight className="h-5 w-5 text-gray-500" />
-            </button>
-          </Link>
-        </div>
+       <PreContinueButton onContinue="/authentication/billing-detail-card" previous="/authentication/account-info"/>
       </div>
     </div>
   );

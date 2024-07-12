@@ -1,5 +1,5 @@
-import Apple_google from "@/app/component/Apple_google";
-import Button from "@/app/component/Button";
+import Applegoogle from "@/app/component/Applegoogle";
+import {Button} from "@/app/component/Button";
 import Input from "@/app/component/Input";
 import { app_style } from "@/utils/constant";
 import { cn } from "@/utils/helpers";
@@ -22,7 +22,7 @@ const SignUp = () => {
               Your Social Campaigns
             </h3>
           </div>
-          <Apple_google />
+          <Applegoogle />
         </div>
         <div className="flex justify-center items-center w-full gap-3">
           <div className="empty_border border border-gray-700 opacity-40 border-t-1 border-b-0 w-[31%] md:w-[34%] lg:w-[27%] xl:w-[29%]"></div>
@@ -47,7 +47,7 @@ const SignUp = () => {
             <input
               type="text"
               placeholder="Repeat Password"
-              className="text-sm  py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color opacity-50  rounded-xl bg-input-bg-color text-white placeholder-card_text_color outline-none "
+              className="text-sm  py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color bg-opacity-50  rounded-xl bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black"
             />
             <div className="flex justify-start items-center gap-3">
               <input
@@ -66,7 +66,7 @@ const SignUp = () => {
               Already have an Account?{" "}
             </p>
             <Link href="/authentication/signin">
-              <span className="text-sm  text-blue_text_color">Sign In</span>
+              <span className="text-sm  text-blue_text_color hover:text-white hover:font-semibold">Sign In</span>
             </Link>{" "}
           </div>
         </div>
