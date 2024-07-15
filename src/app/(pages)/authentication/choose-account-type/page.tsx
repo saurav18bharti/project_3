@@ -12,7 +12,7 @@ import { app_style, max_width_content } from '@/utils/constant';
 const ChooseAccountType = () => {
 
   return (
-    <div className={cn(app_style,"py-[9.7rem] mx-8 md:mx-24 lg:mx-auto ")}>
+    <div className={cn(app_style,"py-[9.7rem] mx-8 md:mx-auto ")}>
       <div className=" max-w-[23rem] flex flex-col justify-center items-center gap-8">
       <div className='flex flex-col justify-center items-center gap-2'>
         <h1 className='text-lg md:text-xl xl:text-2xl  font-semibold text-white'>Choose Account Type</h1>

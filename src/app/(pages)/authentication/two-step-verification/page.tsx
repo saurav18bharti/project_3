@@ -11,7 +11,7 @@ const Twostepverification = () => {
     <div
       className={cn(
         app_style,
-        "py-9 md:pb-[8.9rem] md:pt-[5.9rem] mx-4 md:mx-16 my-12 lg:mx-auto"
+        "py-9 md:pb-[8.9rem] md:pt-[5.9rem] mx-4 my-12 md:mx-auto"
       )}
     >
       <div

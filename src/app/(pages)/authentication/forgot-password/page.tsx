@@ -7,7 +7,7 @@ import { IoIosArrowBack } from "react-icons/io";
 // p-32  max-w-[789px] mx-4 my-24 md:m-24
 const ForgotPassword = () => {
   return (
-    <div className={cn(app_style, "py-32 mx-4 md:mx-16 my-10 lg:mx-auto")}>
+    <div className={cn(app_style, "py-32 mx-4 my-10 md:mx-auto")}>
       <div className="max-w-[23rem] w-full flex flex-col gap-5">
         <div className="flex flex-col justify-center items-center gap-2">
           <h1 className="text-lg md:text-xl xl:text-2xl font-semibold text-white">

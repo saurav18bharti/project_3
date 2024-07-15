@@ -11,7 +11,7 @@ import React from "react";
 
 const SignIn = () => {
   return (
-    <div className={cn(app_style,"   py-9 sm:py-24 mx-4 md:mx-16 my-12 lg:mx-auto")}>
+    <div className={cn(app_style,"   py-9 sm:py-24 mx-4  my-12 md:mx-auto")}>
       <div className= " max-w-[23rem] flex flex-col gap-4 w-full">
 
       <div className="flex flex-col gap-6" >

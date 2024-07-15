@@ -12,7 +12,7 @@ import { PreContinueButton } from "@/app/component/Button";
 
 export default function AccountInfo() {
   return (
-    <div className={cn(app_style ," py-9 sm:py-12 mx-4 md:mx-16 my-10 lg:mx-auto") }>
+    <div className={cn(app_style ," py-9 sm:py-12 mx-4  my-10 md:mx-auto") }>
       <div className="max-w-[28rem]">
         <div className="flex flex-col justify-center items-center gap-2">
           <h1 className="text-lg md:text-xl xl:text-3xl 2xl:text-2xl font-semibold text-white">

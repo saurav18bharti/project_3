@@ -4,7 +4,7 @@ export const button_style = "text-sm xl:text-sm bg-header-button-2 py-3 w-full r
 export const input_style = "text-sm py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color bg-opacity-50 rounded-xl outline-none text-white hover:text-white placeholder-card_text_color bg-input-bg-color transition hover:duration-300 shadow-sm shadow-black "
 
 export const otp_style = "max-w-12 p-3 rounded-xl bg-black bg-opacity-5 border border-white border-opacity-20 text-white"
-export const account_info_specify_team = "border bg-opacity-40 border-apple_google_border_color border-opacity-40 py-2 px-9 bg-input-bg-color rounded-lg text-white text-nowrap shadow-sm shadow-black cursor-pointer hover:bg-slate-800 hover:duration-500 hover:ease-in-out"
+export const account_info_specify_team = "flex-1 text-center border bg-opacity-40 border-apple_google_border_color border-opacity-40 py-2 px-9 bg-input-bg-color rounded-lg text-white text-nowrap shadow-sm shadow-black cursor-pointer hover:bg-slate-800 hover:duration-500 hover:ease-in-out"
 
 
 //////////////overview const ////////////

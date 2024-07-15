@@ -6,7 +6,7 @@ import React from 'react'
 
 const Setupnewpassword = () => {
   return (
-    <div className={cn(app_style ,"  py-9 sm:py-[10.3rem] mx-4 md:mx-16 my-12 lg:mx-auto")}>
+    <div className={cn(app_style ,"  py-9 sm:py-[10.3rem] mx-4 my-12 md:mx-auto")}>
         <div className={ cn(max_width_content ,"flex flex-col justify-center items-center gap-4 px-8 md:px-0")}>
 
         <div className='min-w-64 flex flex-col justify-center items-center gap-2'>

@@ -27,7 +27,7 @@ const BillingDetails = () => {
   ];
 
   return (
-    <div className={cn(app_style ," py-9 sm:py-16 mx-4 md:mx-16 my-10 lg:mx-auto")}>
+    <div className={cn(app_style ," py-9 sm:py-16 mx-4  my-10 md:mx-auto")}>
       <div className="max-w-[28rem] w-full px-4 md:p-0">
         <div className="flex flex-col justify-center items-center gap-2">
           <h1 className="text-lg md:text-xl xl:text-2xl font-semibold text-white">
