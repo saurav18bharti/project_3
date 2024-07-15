@@ -8,6 +8,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { cn } from "@/utils/helpers";
 import { app_style } from "@/utils/constant";
 import { PreContinueButton } from "@/app/component/Button";
+import CustomSelect from "@/app/component/CustomSelect";
 
 const BillingDetails = () => {
   const animals = [
@@ -59,18 +60,7 @@ const BillingDetails = () => {
             />
           </div>
           <div className="w-full">
-           
-            <Select
-              label="Corporation Type"
-              placeholder="Select "
-              labelPlacement="outside"
-              className=" text-black shadow-sm shadow-black rounded-md"
-              classNames={{ label: "!text-white font-semibold" }}
-            >
-              {animals.map((animal) => (
-                <SelectItem key={animal.key}>{animal.label}</SelectItem>
-              ))}
-            </Select>
+            <CustomSelect label="Corporation Type" placeholder="Select" options={animals}/>
           </div>
 
           <div className="w-full flex flex-col gap-2">

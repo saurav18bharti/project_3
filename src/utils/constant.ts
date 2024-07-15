@@ -10,3 +10,5 @@ export const account_info_specify_team = "flex-1 text-center border bg-opacity-4
 //////////////overview const ////////////
 
 export const greyafterhover = " cursor-pointer transition  hover:duration-500 hover:text-gray-400 text-white "
+
+export const graphshadow = "bg-apple_google-bg-color bg-opacity-10 p-6 rounded-xl hover:shadow-md hover:shadow-black cursor-pointer "

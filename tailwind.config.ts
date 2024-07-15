@@ -21,7 +21,9 @@ const config: Config = {
        "card-bg-color": "#222222",
        "input-bg-color": "#7166661f",
        "apple_google-bg-color": "#8581811f",
-       "overviewBackgroundColor":"#e3f5ff"
+       "overviewBackgroundColor1":"#e3f5ff",
+       "overviewBackgroundColor2":"#E5ECF6",
+       
        
       
       },

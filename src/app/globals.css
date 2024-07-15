@@ -18,4 +18,7 @@ body {
   --header-button-1-color: #ffffff;
   --header-button-2-color: #c6c7f8;
 }
+::-webkit-scrollbar {
+  display: none;
+}                 
 
