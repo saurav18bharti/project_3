@@ -28,3 +28,18 @@ export function zeroFormatter(num1: string) {
     return num;
   }
 }
+
+export const getStatusColor = (status: string) => {
+  switch (status) {
+    case "In Progress":
+      return "text-violet-500";
+    case "Completed":
+      return "text-green-500";
+    case "Pending":
+      return "text-orange-500";
+    case "Cancelled":
+      return "text-gray-500";
+    default:
+      return "";
+  }
+};

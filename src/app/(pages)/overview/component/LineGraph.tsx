@@ -1,4 +1,4 @@
-import { zeroFormatter } from "@/utils/helpers";
+'use client'
 import React from "react";
 import {
   LineChart,
@@ -13,69 +13,59 @@ import {
   ReferenceArea,
 } from "recharts";
 
-const data = [
-  {
-    name: "Jan",
-    uv: 8000,
-    pv: 14000,
-    amt: 2400,
-  },
-  {
-    name: "Feb",
-    uv: 12000,
-    pv: 9000,
-    amt: 2210,
-  },
-  {
-    name: "Mar",
-    uv: 20000,
-    pv: 15000,
-    amt: 2290,
-  },
-  {
-    name: "Apr",
-    uv: 8000,
-    pv: 25000,
-    amt: 2000,
-  },
-  {
-    name: "May",
-    uv: 11000,
-    pv: 29000,
-    amt: 2181,
-  },
-  {
-    name: "Jun",
-    uv: 22000,
-    pv: 21000,
-    amt: 2500,
-  },
-  {
-    name: "Jul",
-    uv: 28000,
-    pv: 21050,
-    amt: 2100,
-  },
-];
+interface DataPoint {
+  name: string;
+  uv: number;
+  pv: number;
+  amt: number;
+}
 
-export default function LineGraph() {
+interface LineConfig {
+  dataKey: string;
+  stroke: string;
+  activeDot?: { r: number };
+  strokeDasharray?: string;
+}
+
+interface ReusableLineGraphProps {
+  data: DataPoint[];
+  width?: number;
+  height?: number;
+  xAxisDataKey?: string;
+  xAxisPadding?: { left: number; right: number };
+  yAxisTickFormatter?: (value: any) => string;
+  lines?: LineConfig[];
+}
+
+const LineGraph = ({
+  data,
+  width = 950,
+  height = 350,
+  xAxisDataKey = "name",
+  xAxisPadding = { left: 30, right: 30 },
+  yAxisTickFormatter,
+  lines = [
+    { dataKey: "pv", stroke: "#cacbf9", activeDot: { r: 8 } },
+    { dataKey: "uv", stroke: "#9db8cb", strokeDasharray: "3 4 5 2" }
+  ]
+}:ReusableLineGraphProps) => {
   return (
-    <LineChart width={950} height={350} data={data}>
-      <XAxis dataKey="name" padding={{ left: 30, right: 30 }} />
-      <YAxis tickFormatter={(value) => zeroFormatter(value)} />
+    <LineChart width={width} height={height} data={data}>
+      <XAxis dataKey={xAxisDataKey} padding={xAxisPadding} />
+      <YAxis tickFormatter={yAxisTickFormatter} />
       <Tooltip />
-      <Line
-        type="monotone"
-        dataKey="pv"
-        stroke="#cacbf9"
-        activeDot={{ r: 8 }}
-      />
-      <Line
-        type="monotone"
-        dataKey="uv"
-        stroke="#9db8cb"
-        strokeDasharray="3 4 5 2"
-      />
+      {lines.map((line, index) => (
+        <Line
+          key={index}
+          type="monotone"
+          dataKey={line.dataKey}
+          stroke={line.stroke}
+          activeDot={line.activeDot}
+          strokeDasharray={line.strokeDasharray}
+        />
+      ))}
     </LineChart>
   );
-}
+};
+
+export default LineGraph;

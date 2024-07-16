@@ -6,8 +6,10 @@ import Image from "next/image";
 import LineGraph from "../../component/LineGraph";
 import BarGraph from "../../component/BarGraph";
 import PieGraph from "../../component/PieGraph";
-import { graphshadow } from "@/utils/constant";
-import { cn } from "@/utils/helpers";
+import { graphshadow, maincontentpadding } from "@/utils/constant";
+import { cn, zeroFormatter } from "@/utils/helpers";
+import { BatteryCharging, FolderClosed, ListChecks } from "lucide-react";
+import { PiUsersThreeLight } from "react-icons/pi";
 
 const DashboardOverview = () => {
   const day = [
@@ -22,24 +24,115 @@ const DashboardOverview = () => {
       value: "7,265",
       valueinpercentage: "+11.01%",
       icon: "/overview/midcontent/increarrow.svg",
+      icon2:<FolderClosed />
     },
     {
       title: "Clicks",
       value: "2,265",
       valueinpercentage: "-11.01%",
       icon: "/overview/midcontent/decrearrow.svg",
+      icon2:<ListChecks />
     },
     {
       title: "Conversions",
       value: "1,265",
       valueinpercentage: "+11.01%",
       icon: "/overview/midcontent/increarrow.svg",
+      icon2:<PiUsersThreeLight />
     },
     {
       title: "CTR",
       value: "11.01%",
       valueinpercentage: "+11.01%",
       icon: "/overview/midcontent/increarrow.svg",
+      icon2:<BatteryCharging />
+    },
+  ];
+
+
+  const customData = [
+    { name: "Group E", value: 500 },
+    { name: "Group F", value: 1000 },
+    { name: "Group G", value: 1500 },
+    { name: "Group H", value: 200 },
+  ];
+
+  const customPieData = [
+    {
+      title: "Canada",
+      valueinpercentage: "40.2%",
+      icon: "/overview/midcontent/dot.svg",
+    },
+    {
+      title: "Mexico",
+      valueinpercentage: "25.5%",
+      icon: "/overview/midcontent/dot.svg",
+    },
+    {
+      title: "Germany",
+      valueinpercentage: "19.3%",
+      icon: "/overview/midcontent/dot.svg",
+    },
+    {
+      title: "France",
+      valueinpercentage: "15.0%",
+      icon: "/overview/midcontent/dot.svg",
+    },
+  ];
+
+  const deviceData = [
+    { name: "Linux", value: 18000 },
+    { name: "Mac", value: 30000 },
+    { name: "iOS", value: 20000 },
+    { name: "Windows", value: 32000 },
+    { name: "Android", value: 10000 },
+    { name: "Other", value: 25000 },
+  ];
+
+
+  
+  const data = [
+    {
+      name: "Jan",
+      uv: 8000,
+      pv: 14000,
+      amt: 2400,
+    },
+    {
+      name: "Feb",
+      uv: 12000,
+      pv: 9000,
+      amt: 2210,
+    },
+    {
+      name: "Mar",
+      uv: 20000,
+      pv: 15000,
+      amt: 2290,
+    },
+    {
+      name: "Apr",
+      uv: 8000,
+      pv: 25000,
+      amt: 2000,
+    },
+    {
+      name: "May",
+      uv: 11000,
+      pv: 29000,
+      amt: 2181,
+    },
+    {
+      name: "Jun",
+      uv: 22000,
+      pv: 21000,
+      amt: 2500,
+    },
+    {
+      name: "Jul",
+      uv: 28000,
+      pv: 21050,
+      amt: 2100,
     },
   ];
 
@@ -56,7 +149,7 @@ const DashboardOverview = () => {
   };
 
   return (
-    <div className="py-8 px-6">
+    <div className={maincontentpadding}>
       <div className="flex justify-between items-center">
         <h1 className="text-white font-semibold">Overview</h1>
         <div className="w-32 ">
@@ -99,10 +192,13 @@ const DashboardOverview = () => {
             </div>
           </div>
           <div className="mt-6 ">
-            <LineGraph />
+          <LineGraph
+      data={data}
+      yAxisTickFormatter={zeroFormatter}
+    />
           </div>
         </div>
-        {/* "bg-apple_google-bg-color bg-opacity-10 p-6 rounded-xl hover:shadow-md hover:shadow-black cursor-pointer hover:cursor-pointer" */}
+       
         <div
           className={cn(graphshadow, "py-6 px-8 w-full gap-8  flex flex-col ")}
         >
@@ -136,10 +232,17 @@ const DashboardOverview = () => {
 
       <div className="flex justify-between ">
         <div className="flex justify-center cursor-pointer">
-          <BarGraph />
+        <BarGraph
+      data={deviceData}
+      title="Traffic by Device"
+      customwidth={660}
+      customheight={280}
+      barSize={40}
+      fill="#82ca9d"
+    />
         </div>
         <div>
-          <PieGraph />
+          <PieGraph title="Traffic by Location" data={customData} pieData={customPieData} customwidth={333} customheight={370} />
         </div>
       </div>
     </div>

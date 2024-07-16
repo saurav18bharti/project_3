@@ -1,6 +1,4 @@
-
-import { graphshadow } from "@/utils/constant";
-import { cn } from "@/utils/helpers";
+'use client'
 import React from "react";
 import {
   BarChart,
@@ -8,75 +6,60 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Legend,
-  Cell,
+  ResponsiveContainer,
 } from "recharts";
+import { graphshadow } from "@/utils/constant";
+import { cn, zeroFormatter } from "@/utils/helpers";
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-const data = [
-  {
-    name: "Linux",
-    uv: 18000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: "Mac",
-    uv: 30000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: "iOS",
-    uv: 20000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: "Windows",
-    uv: 32000,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: "Android",
-    uv: 10000,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: "Other",
-    uv: 25000 ,
-    pv: 3800,
-    amt: 2500,
-  },
- 
-];
+interface DataPoint {
+  name: string;
+  value: number;
+  [key: string]: any; // Allow for additional properties
+}
 
-export default function BarGraph() {
+interface BarGraphProps {
+  data: DataPoint[];
+  title: string;
+  customwidth?: number | string;
+  customheight?: number | string;
+  barSize?: number;
+  dataKey?: string;
+  fill?: string;
+  className?: string;
+}
+
+const BarGraph = ({
+  data,
+  title,
+  customwidth ,
+  customheight,
+  barSize = 40,
+  dataKey = "value",
+  fill = "#82ca9d",
+  className,
+}:BarGraphProps) => {
   return (
-    <div className={cn(graphshadow,"flex flex-col justify-between")}>
-      <h1 className="text-white font-semibold">Traffic by Device</h1>
-    <BarChart
-      width={610}
-      height={280}
-      data={data}
-      margin={{
-        top: 10,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-     barSize={40}
-     
-    >
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Tooltip shared={false} trigger="click" />
-      <Bar dataKey="uv" fill="#82ca9d" />
-     
-     
-    </BarChart>
+    <div className={cn(graphshadow, "flex flex-col justify-between", className)}>
+      <h1 className="text-white font-semibold mb-8">{title}</h1>
+      <ResponsiveContainer width={customwidth} height={customheight}>
+        <BarChart
+          data={data}
+          margin={{
+            top: 10,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+          barSize={barSize}
+        >
+          <XAxis dataKey="name" />
+          <YAxis  tickFormatter={(value) => zeroFormatter(value)} />
+          <Tooltip shared={false} trigger="click" />
+          <Bar dataKey={dataKey} fill={fill} />
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
-}
+};
+
+export default BarGraph;

@@ -9,6 +9,7 @@ import {
   ShoppingBag,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { IoChatbubblesOutline } from "react-icons/io5";
@@ -111,16 +112,20 @@ export const OverviewLeftPart = () => {
             Dashboards
           </p>
           <div>
-            <div
-              className={cn(
-                greyafterhover,
-                "flex items-center gap-4 px-8 bg-apple_google-bg-color bg-opacity-10 py-1 rounded-xl my-4  text-white pr-12"
-              )}
-            >
-              <PiChartPieSliceFill className="h-8" />
-              <h1>Overview</h1>
-            </div>
+            <Link href="/overview">
+              <div
+                className={cn(
+                  greyafterhover,
+                  "flex items-center gap-4 px-8 bg-apple_google-bg-color bg-opacity-10 py-1 rounded-xl my-4  text-white pr-12"
+                )}
+              >
+                <PiChartPieSliceFill className="h-8" />
+                <h1>Overview</h1>
+              </div>
+            </Link>
             <ul className="flex flex-col gap-5 text-sm">
+              <Link href="/overview/dashboard-eCommerce">
+              
               <li
                 className={cn(
                   greyafterhover,
@@ -130,15 +135,19 @@ export const OverviewLeftPart = () => {
                 <ChevronRight className="h-5 text-card_text_color " />
                 <ShoppingBag className="h-5" /> <span>eCommerce</span>
               </li>
-              <li
-                className={cn(
-                  greyafterhover,
-                  "flex items-center gap-2 text-white"
-                )}
-              >
-                <ChevronRight className="h-5 text-card_text_color" />
-                <FolderClosed className="h-5" /> <span>Projects</span>
-              </li>
+              </Link>
+              <Link href="/overview/dashboard-projects">
+                <li
+                  className="
+                 
+                  flex items-center gap-2 text-white cursor-pointer transition  hover:duration-500 hover:text-gray-400"
+                >
+                  <ChevronRight className="h-5 text-card_text_color" />
+                  <FolderClosed className="h-5" /> <span>Projects</span>
+                </li>
+              </Link>
+
+              <Link href="/overview/dashboard-orderlist">
               <li
                 className={cn(
                   greyafterhover,
@@ -148,6 +157,8 @@ export const OverviewLeftPart = () => {
                 <ChevronRight className="h-5 text-card_text_color" />
                 <BookOpen className="h-5" /> <span>Online Courses</span>
               </li>
+              </Link>
+              
             </ul>
           </div>
         </div>
