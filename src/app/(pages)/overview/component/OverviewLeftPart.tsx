@@ -112,7 +112,7 @@ export const OverviewLeftPart = () => {
             Dashboards
           </p>
           <div>
-            <Link href="/overview">
+            <Link href="/overview/dashboard-nodate">
               <div
                 className={cn(
                   greyafterhover,
@@ -133,7 +133,7 @@ export const OverviewLeftPart = () => {
                 )}
               >
                 <ChevronRight className="h-5 text-card_text_color " />
-                <ShoppingBag className="h-5" /> <span>eCommerce</span>
+                <ShoppingBag className="h-5" /> eCommerce
               </li>
               </Link>
               <Link href="/overview/dashboard-projects">
@@ -143,7 +143,7 @@ export const OverviewLeftPart = () => {
                   flex items-center gap-2 text-white cursor-pointer transition  hover:duration-500 hover:text-gray-400"
                 >
                   <ChevronRight className="h-5 text-card_text_color" />
-                  <FolderClosed className="h-5" /> <span>Projects</span>
+                  <FolderClosed className="h-5" /> Projects
                 </li>
               </Link>
 
@@ -155,7 +155,7 @@ export const OverviewLeftPart = () => {
                 )}
               >
                 <ChevronRight className="h-5 text-card_text_color" />
-                <BookOpen className="h-5" /> <span>Online Courses</span>
+                <BookOpen className="h-5" /> Online Courses
               </li>
               </Link>
               
@@ -183,7 +183,7 @@ export const OverviewLeftPart = () => {
                   ) : (
                     <ChevronRight className="h-5 text-card_text_color" />
                   )}
-                  {item1.icon} <span>{item1.title}</span>
+                  {item1.icon} {item1.title}
                 </li>
 
                 {item1.itemlist.map((item2) => (

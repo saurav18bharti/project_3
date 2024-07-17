@@ -245,6 +245,7 @@ export const NextUiTable = ({orders}:any) => {
       <Table 
         selectionMode="multiple" 
         aria-label="Example table with custom cells"
+        color="primary"
       >
         <TableHeader>
           <TableColumn>ORDER ID</TableColumn>
