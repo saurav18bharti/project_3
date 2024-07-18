@@ -1,11 +1,16 @@
 import { ArrowDownUp, ListFilter, Plus, Search } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 
-const FilterBar = () => {
+interface FilterBarProps {
+  showmodal: boolean;
+  setShowmodal: (value: boolean) => void;
+}
+const FilterBar = ({showmodal,setShowmodal}:FilterBarProps) => {
+ 
   return (
     <div className="flex justify-between items-center py-2 px-1 bg-overviewBorderColor bg-opacity-15 rounded-lg my-4">
         <div className="flex justify-between items-center gap-6 px-4">
-          <Plus className="text-white hover:text-card_text_color cursor-pointer" />
+          <Plus className="text-white hover:text-card_text_color cursor-pointer" onClick={()=>setShowmodal(!showmodal)} />
           <ListFilter className="text-white hover:text-card_text_color cursor-pointer" />
           <ArrowDownUp className="text-white hover:text-card_text_color cursor-pointer" />
         </div>

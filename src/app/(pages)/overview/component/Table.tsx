@@ -5,6 +5,7 @@ import React from "react";
 
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, RadioGroup, Radio} from "@nextui-org/react";
 import { getStatusColor } from "@/utils/helpers";
+import { usePathname } from "next/navigation";
 
 const colors = ["default", "primary", "secondary", "success", "warning", "danger"];
 
@@ -129,6 +130,7 @@ export default function OverviewTable() {
             >
               Speed
             </th>
+            
             <th
               scope="col"
               className="px-6 py-3 text-left text-sm font-medium text-overviewBorderColor  tracking-wider"
@@ -240,6 +242,7 @@ export const ProductTable = () => {
 
 
 export const NextUiTable = ({orders}:any) => {
+  const pathname = usePathname();
   return (
     <div className="flex flex-col gap-3">
       <Table 
@@ -248,12 +251,12 @@ export const NextUiTable = ({orders}:any) => {
         color="primary"
       >
         <TableHeader>
-          <TableColumn>ORDER ID</TableColumn>
-          <TableColumn>USER</TableColumn>
-          <TableColumn>PROJECT</TableColumn>
-          <TableColumn>ADDRESS</TableColumn>
-          <TableColumn>DATE</TableColumn>
-          <TableColumn>STATUS</TableColumn>
+        { pathname === "/overview/list-1" ? <TableColumn>Serial</TableColumn> :<TableColumn>Order id</TableColumn>}  
+          <TableColumn>User</TableColumn>
+          { pathname === "/overview/list-1" ? <TableColumn>Email</TableColumn> :<TableColumn>Project</TableColumn>}  
+          <TableColumn>Address</TableColumn>
+          <TableColumn>Date</TableColumn>
+        { pathname === "/overview/list-1" ? <TableColumn>Registeration date</TableColumn> :<TableColumn>Status</TableColumn>}  
         </TableHeader>
         <TableBody>
           {orders.map((order:any) => (

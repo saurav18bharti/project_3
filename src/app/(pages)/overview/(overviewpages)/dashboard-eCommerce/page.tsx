@@ -189,8 +189,8 @@ const DashboardEcommerce = () => {
             />
           </div>
         </div>
-        <div className={cn(graphshadow)}>
-          <h1 className=" text-white font-semibold">Revenue by Location</h1>
+        <div className={graphshadow}>
+          <h1 className=" text-white font-semibold ">Revenue by Location</h1>
           <Image
             src="/overview/midcontent/map.svg"
             width={660}

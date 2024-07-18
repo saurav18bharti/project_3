@@ -23,6 +23,7 @@ const config: Config = {
        "apple_google-bg-color": "#8581811f",
        "overviewBackgroundColor1":"#e3f5ff",
        "overviewBackgroundColor2":"#E5ECF6",
+       "bodyBackgroundColor":"#222222f3"
        
        
       
@@ -37,6 +38,7 @@ const config: Config = {
       }
     },
   },
+  // darkMode: "class",
   plugins: [nextui()],
 };
 export default config;
