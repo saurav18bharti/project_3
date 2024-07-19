@@ -28,7 +28,7 @@ const PieGraph = ({ data, pieData ,title ,customwidth,customheight }: PieGraphPr
   return (
     <div className={cn(graphshadow, "  flex flex-col basis-1/4 ")}>
       <h1 className="text-white font-semibold">{title}</h1>
-      <div className={`${pathname === "/overview" ? "flex flex-col md:flex-row" : "flex flex-col md:flex-row"} justify-between items-center`}>
+      <div className={`${pathname === "/overview" ? "flex flex-col md:flex-row" : "flex flex-row md:flex-col"} justify-between items-center`}>
         <div >
      
         <ResponsiveContainer width={customwidth} height={customheight} >
