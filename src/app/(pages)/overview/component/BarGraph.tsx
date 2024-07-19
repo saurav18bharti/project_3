@@ -20,8 +20,8 @@ interface DataPoint {
 interface BarGraphProps {
   data: DataPoint[];
   title: string;
-  customwidth?: number | string;
-  customheight?: number | string;
+  customwidth?: any | number | string;
+  customheight?: any | number | string;
   barSize?: number;
   dataKey?: string;
   fill?: string;
@@ -39,9 +39,9 @@ const BarGraph = ({
   className,
 }:BarGraphProps) => {
   return (
-    <div className={cn(graphshadow, "flex flex-col justify-between", className)}>
+    <div className={cn(graphshadow, " w-full flex flex-col justify-between", className)}>
       <h1 className="text-white font-semibold mb-8">{title}</h1>
-      <ResponsiveContainer width={customwidth} height={customheight}>
+      <ResponsiveContainer aspect={customwidth / customheight}>
         <BarChart
           data={data}
           margin={{
@@ -52,8 +52,8 @@ const BarGraph = ({
           }}
           barSize={barSize}
         >
-          <XAxis dataKey="name" />
-          <YAxis  tickFormatter={(value) => zeroFormatter(value)} />
+          <XAxis className="text-xs md:text-base" dataKey="name" />
+          <YAxis className="text-xs md:text-base"  tickFormatter={(value) => zeroFormatter(value)} />
           <Tooltip shared={false} trigger="click" />
           <Bar dataKey={dataKey} fill={fill} />
         </BarChart>

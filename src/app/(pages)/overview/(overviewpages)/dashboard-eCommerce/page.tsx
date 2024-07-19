@@ -139,8 +139,8 @@ const DashboardEcommerce = () => {
   return (
     <div className={maincontentpadding}>
       <h1 className="text-white font-semibold">eCommerce</h1>
-      <div className="flex justify-center items-center gap-8 mt-6">
-        <div className="grid grid-cols-2 gap-8">
+      <div className="flex flex-col 2xl:flex-row justify-center items-center gap-8 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-2  gap-7 2xl:gap-12   w-full ">
           <OverviewCard data={cardData} />
         </div>
 
@@ -148,20 +148,20 @@ const DashboardEcommerce = () => {
           data={deviceData}
           title="Projection vs Actuals"
           customwidth={660}
-          customheight={240}
+          customheight={270}
           barSize={40}
           fill="#82ca9d"
         />
       </div>
 
-      <div className="flex justify-between gap-6 py-10  ">
+      <div className="flex flex-col xl:flex-row justify-between gap-6 py-10  ">
         <div className={graphshadow}>
-          <div className="flex items-center gap-12  w-full">
+          <div className="flex flex-col md:flex-row items-center gap-5 md:gap-12  w-full">
             <p className="text-white font-semibold">Revenue</p>
 
-            <div className="empty_border border border-apple_google_border_color border-r-1 border-l-0 h-5"></div>
+            <div className="empty_border border hidden xl:block border-apple_google_border_color border-r-1 border-l-0 h-5"></div>
             <div className="flex items-center gap-12">
-              <p className="flex justify-center items-center gap-2 text-white">
+              <p className="flex flex-col md:flex-row text-center text-sm md:text-base md:text-balance justify-center items-center gap-2 text-white">
                 <Image
                   src="/overview/midcontent/dot.svg"
                   width={6}
@@ -170,7 +170,7 @@ const DashboardEcommerce = () => {
                 />
                 Current Week $58,211
               </p>
-              <p className="flex justify-center items-center gap-2 text-white">
+              <p className="flex flex-col md:flex-row  text-center text-sm md:text-base md:text-balance justify-center items-center gap-2 text-white">
                 <Image
                   src="/overview/midcontent/dot.svg"
                   width={6}
@@ -181,15 +181,16 @@ const DashboardEcommerce = () => {
               </p>
             </div>
           </div>
-          <div className="mt-6 flex gap-8">
+          <div className="mt-12 md:mt-6 flex gap-8 basis-3/4">
             <LineGraph
               data={monthdata}
               yAxisTickFormatter={zeroFormatter}
-              width={1000}
+              width={600}
+              height={250}
             />
           </div>
         </div>
-        <div className={graphshadow}>
+        <div className={cn(graphshadow,"basis-1/4")}>
           <h1 className=" text-white font-semibold ">Revenue by Location</h1>
           <Image
             src="/overview/midcontent/map.svg"
@@ -215,14 +216,14 @@ const DashboardEcommerce = () => {
       </div>
 
       <div>
-        <div className="flex justify-between gap-8">
-          <div className={cn(graphshadow, "w-full")}>
+        <div className="flex flex-col xl:flex-row justify-between gap-8">
+          <div className={cn(graphshadow, "w-full hidden md:block basis-full")}>
             <h1 className="text-white font-semibold">Top Selling Products</h1>
 
             <ProductTable />
           </div>
           <PieGraph
-            customwidth={230}
+            customwidth={200}
             customheight={300}
             data={customData}
             pieData={customPieData}

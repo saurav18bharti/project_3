@@ -85,7 +85,7 @@ export const OverviewLeftPart = () => {
     },
   ];
   return (
-    <div className="w-[221px] flex flex-col justify-between items-center flex-shrink-0 min-h-[100vh] pt-8 border-r-1 border-overviewBorderColor">
+    <div className="w-[221px] hidden lg:flex flex-col justify-between items-center flex-shrink-0 min-h-[100vh] pt-8 border-r-1 border-overviewBorderColor">
       <div className="flex flex-col justify-between gap-6 ">
         <div className="flex items-center gap-2">
           <Image

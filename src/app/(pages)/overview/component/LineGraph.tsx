@@ -11,6 +11,7 @@ import {
   ReferenceLine,
   ReferenceDot,
   ReferenceArea,
+  ResponsiveContainer,
 } from "recharts";
 
 interface DataPoint {
@@ -40,7 +41,7 @@ interface ReusableLineGraphProps {
 const LineGraph = ({
   data,
   width = 950,
-  height = 350,
+  height = 300,
   xAxisDataKey = "name",
   xAxisPadding = { left: 30, right: 30 },
   yAxisTickFormatter,
@@ -50,9 +51,11 @@ const LineGraph = ({
   ]
 }:ReusableLineGraphProps) => {
   return (
-    <LineChart width={width} height={height} data={data}>
-      <XAxis dataKey={xAxisDataKey} padding={xAxisPadding} />
-      <YAxis tickFormatter={yAxisTickFormatter} />
+    <ResponsiveContainer width="100%" height={height}>
+
+    <LineChart  data={data}>
+      <XAxis className="text-xs md:text-balance" dataKey={xAxisDataKey} padding={xAxisPadding} />
+      <YAxis className="text-xs md:text-balance" tickFormatter={yAxisTickFormatter} />
       <Tooltip />
       {lines.map((line, index) => (
         <Line
@@ -65,6 +68,7 @@ const LineGraph = ({
         />
       ))}
     </LineChart>
+    </ResponsiveContainer>
   );
 };
 

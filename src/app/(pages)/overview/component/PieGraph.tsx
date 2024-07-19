@@ -4,7 +4,7 @@ import { cn } from "@/utils/helpers";
 import Image from "next/image";
 import React from "react";
 import PropTypes from "prop-types";
-import { PieChart, Pie, Cell } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import { usePathname } from "next/navigation";
 
 const COLORS = ["#a1e3cb", "#b1e3ff", "#cbccf9", "#a8c5da"];
@@ -19,22 +19,26 @@ interface PieGraphProps {
   data: { name: string; value: number }[];
   pieData: PieData[];
   title: string;
-  customwidth:number;
-  customheight:number;
+  customwidth:any | number;
+  customheight:any |number;
 }
 
 const PieGraph = ({ data, pieData ,title ,customwidth,customheight }: PieGraphProps) => {
   const pathname = usePathname();
   return (
-    <div className={cn(graphshadow, "flex flex-col")}>
+    <div className={cn(graphshadow, "  flex flex-col basis-1/4 ")}>
       <h1 className="text-white font-semibold">{title}</h1>
-      <div className={`${pathname === "/overview" ? "flex" : "flex flex-col"} justify-center items-center`}>
-        <div className={` ${pathname === '/overview' ?" mt-[-50px]" : "mt-[-78px]"}`}>
-          <PieChart width={customwidth} height={customheight}>
+      <div className={`${pathname === "/overview" ? "flex flex-col md:flex-row" : "flex flex-col md:flex-row"} justify-between items-center`}>
+        <div >
+     
+        <ResponsiveContainer width={customwidth} height={customheight} >
+
+
+          <PieChart  >
             <Pie
               data={data}
-              cx={120}
-              cy={200}
+              cx={80}
+              cy={160}
               innerRadius={38}
               outerRadius={80}
               fill="#8884d8"
@@ -50,6 +54,8 @@ const PieGraph = ({ data, pieData ,title ,customwidth,customheight }: PieGraphPr
               
             </Pie>
           </PieChart>
+        </ResponsiveContainer>
+    
         </div>
         <div className="pr-[20px]">
           {pieData.map((item, index) => (

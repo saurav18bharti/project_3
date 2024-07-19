@@ -18,7 +18,7 @@ const CustomSelect = ({ label, placeholder, options }: CustomSelectProps) => {
         placeholder={placeholder}
         labelPlacement="outside"
         className="text-black shadow-sm shadow-black rounded-md"
-        classNames={{ label: "!text-white font-semibold" }}
+        classNames={{ label: "text-xs md:text-balance text-white font-semibold" }}
       >
         {options.map((option) => (
           <SelectItem key={option.key}>{option.label}</SelectItem>

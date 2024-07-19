@@ -42,7 +42,7 @@ export const OverviewRight = () => {
   
 
   return (
-    <div className="w-[300px] flex-shrink-0 border-l-1 border-overviewBorderColor flex flex-col gap-8 py-8 px-4">
+    <div className="w-[300px] flex-shrink-0 border-l-1 border-overviewBorderColor hidden gap-8 py-8 px-4 2xl:flex 2xl:flex-col">
       <div className="flex flex-col gap-4">
         <h1 className="text-white">Notifications</h1>
         <div className="flex flex-col gap-4 cursor-pointer ">

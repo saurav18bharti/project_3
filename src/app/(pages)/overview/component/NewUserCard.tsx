@@ -8,7 +8,7 @@ const NewUserCard = ({showmodal, setShowmodal}: {showmodal: boolean, setShowmoda
  
   return (
     <Modal>
-    <div className="flex items-center justify-center min-h-screen bg-blue-300 bg-opacity-10">
+    <div className="flex items-center justify-center min-h-screen  bg-opacity-10">
     <div className="max-w-md mx-auto">
       <div className="flex justify-between items-center p-6">
         <Plus className="text-white " />
