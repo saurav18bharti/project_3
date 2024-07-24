@@ -35,12 +35,12 @@ const NewUserCard = ({showmodal, setShowmodal}: {showmodal: boolean, setShowmoda
             <DatePicker label="date"/>
             <div className="flex justify-between gap-4">
               <button
-                className="text-white bg-apple_google-bg-color py-2 px-14 rounded-xl cursor-pointer"
+                className="text-white bg-apple_google-bg-color py-2 px-14 rounded-xl cursor-pointer hover:bg-overviewBorderColor hover:transition-all"
                 onClick={() => setShowmodal(!showmodal)}
               >
                 Cancel
               </button>
-              <button className="text-black bg-blue_text_color py-2 px-14 rounded-xl cursor-pointer">
+              <button className="text-black bg-blue_text_color py-2 px-14 rounded-xl cursor-pointer  hover:bg-opacity-90">
                 Save
               </button>
             </div>

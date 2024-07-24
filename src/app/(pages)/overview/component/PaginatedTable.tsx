@@ -1,7 +1,5 @@
-
-import React, { useState } from 'react';
-import { Pagination } from '@nextui-org/react';
-
+import React, { useState } from "react";
+import { Pagination } from "@nextui-org/react";
 
 interface PaginatedTableProps<T> {
   data: T[];
@@ -9,8 +7,11 @@ interface PaginatedTableProps<T> {
   renderTable: (items: T[]) => React.ReactNode;
 }
 
-
-function PaginatedTable<T>({ data, itemsPerPage, renderTable }: PaginatedTableProps<T>) {
+function PaginatedTable<T>({
+  data,
+  itemsPerPage,
+  renderTable,
+}: PaginatedTableProps<T>) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(data.length / itemsPerPage);
@@ -26,7 +27,9 @@ function PaginatedTable<T>({ data, itemsPerPage, renderTable }: PaginatedTablePr
 
   return (
     <div className="flex flex-col gap-4">
-      {renderTable(currentItems)}
+      <div className="overflow-x-auto max-w-[93vw] lg:max-w-[100vw]">
+        {renderTable(currentItems)}
+      </div>
       <div className="flex justify-end">
         <Pagination
           total={totalPages}

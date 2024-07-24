@@ -26,12 +26,15 @@ interface PieGraphProps {
 const PieGraph = ({ data, pieData ,title ,customwidth,customheight }: PieGraphProps) => {
   const pathname = usePathname();
   return (
-    <div className={cn(graphshadow, "  flex flex-col basis-1/4 ")}>
+    <div className={cn(graphshadow, "  flex flex-col basis-1/4 p-8 h-fit")}>
       <h1 className="text-white font-semibold">{title}</h1>
-      <div className={`${pathname === "/overview" ? "flex flex-col md:flex-row" : "flex flex-row md:flex-col"} justify-between items-center`}>
-        <div >
-     
-        <ResponsiveContainer width={customwidth} height={customheight} >
+      <div className={`${pathname === "/overview" ? "flex flex-basis flex-col md:flex-row xl:flex-row" : "flex flex-col md:flex-row xl:flex-col"} justify-between  items-stretch `}>
+      
+     <div className="flex-grow w-[178px] h-[290px] block mx-auto">
+    
+      
+
+     <ResponsiveContainer width={customwidth} height={customheight} className={"block m-auto"} >
 
 
           <PieChart  >
@@ -55,13 +58,16 @@ const PieGraph = ({ data, pieData ,title ,customwidth,customheight }: PieGraphPr
             </Pie>
           </PieChart>
         </ResponsiveContainer>
+     
+     </div>
+       
     
-        </div>
-        <div className="pr-[20px]">
+      
+        <div className=" flex flex-col self-center  flex-grow">
           {pieData.map((item, index) => (
             <div
               key={index}
-              className="flex justify-between items-center gap-20 my-4"
+              className="flex justify-between items-center gap-20 my-2"
             >
               <div className="flex justify-between items-center gap-4">
                 <Image src={item.icon} width={8} height={8} alt={item.title} />

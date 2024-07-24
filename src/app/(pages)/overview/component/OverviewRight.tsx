@@ -6,7 +6,6 @@ import React from "react";
 import { BsBug } from "react-icons/bs";
 import RightBarMode from "./RightBarMode";
 
-
 const ListItem = ({ icon, description, active, isImage }: any) => (
   <>
     <div
@@ -23,10 +22,10 @@ const ListItem = ({ icon, description, active, isImage }: any) => (
           className="size-8 rounded-full"
         />
       ) : (
-        <div className="p-2 bg-overviewBackgroundColor1 rounded-xl">{icon}</div>
+        <div className="p-2 bg-overviewBackgroundColor1 rounded-xl hover:bg-green-100">{icon}</div>
       )}
       <div className="flex flex-col gap-1">
-        <h1 className="text-white text-sm hover:text-card_text_color">
+        <h1 className="text-white text-base hover:text-card_text_color">
           {description}
         </h1>
         {active && <p className="text-xs text-card_text_color">{active}</p>}
@@ -37,9 +36,11 @@ const ListItem = ({ icon, description, active, isImage }: any) => (
 
 export const OverviewRight = () => {
   const pathname = usePathname();
-  const HIDE_ON_PATH = ["/overview/dashboard-orderlist/orderlist-2","/overview/dashboard-userlist"];
-  if (HIDE_ON_PATH.includes(pathname)) return <RightBarMode/>;
-  
+  const HIDE_ON_PATH = [
+    "/overview/dashboard-orderlist/orderlist-2",
+    "/overview/dashboard-userlist",
+  ];
+  if (HIDE_ON_PATH.includes(pathname)) return <RightBarMode />;
 
   return (
     <div className="w-[300px] flex-shrink-0 border-l-1 border-overviewBorderColor hidden gap-8 py-8 px-4 2xl:flex 2xl:flex-col">

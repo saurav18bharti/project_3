@@ -11,7 +11,7 @@ const Setupnewpassword = () => {
 
         <div className='min-w-64 flex flex-col justify-center items-center gap-2'>
             <h1 className='text-2xl text-white font-semibold'>Setup new password</h1>
-            <p className='text-sm text-card_text_color text-center md:text-balance'>Have you already reset the password ? <span className='text-blue_text_color'> Sign in</span></p>
+            <p className='text-sm text-card_text_color text-center md:text-base'>Have you already reset the password ? <span className='text-blue_text_color'> Sign in</span></p>
         </div>
         <div className='flex flex-col gap-5'>
             <div>
@@ -28,7 +28,7 @@ const Setupnewpassword = () => {
         </div>
                 
             </div>
-        <p className="text-[12px] md:text-sm  text-card_text_color opacity-80 font-normal">Use 8 or more characters with a mix of letters, numbers & symbols.</p>
+        <p className="text-[12px] md:text-base  text-card_text_color opacity-80 font-normal">Use 8 or more characters with a mix of letters, numbers & symbols.</p>
         <input type="text" placeholder="Repeat Password" className="text-sm w-full min-w-64   py-2 px-3 md:py-3 md:px-4 border border-apple_google_border_color bg-opacity-50  rounded-xl bg-input-bg-color text-white placeholder-card_text_color outline-none shadow-sm shadow-black "/>
         <div className="flex justify-start items-center gap-4">
 

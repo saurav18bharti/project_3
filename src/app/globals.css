@@ -13,7 +13,8 @@
   min-height: 100vh;
 } */
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -24,6 +25,6 @@ html, body {
   --header-button-1-color: #ffffff;
   --header-button-2-color: #c6c7f8;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */

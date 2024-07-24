@@ -32,7 +32,7 @@ export function zeroFormatter(num1: string) {
 export const getStatusColor = (status: string) => {
   switch (status) {
     case "In Progress":
-      return "text-violet-500";
+      return "text-violet-600";
     case "Completed":
       return "text-green-500";
     case "Pending":

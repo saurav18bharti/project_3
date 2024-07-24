@@ -25,8 +25,8 @@ const Header = () => {
 
         {/* Third Section: Signup and Signin Buttons */}
         <div className="flex gap-2 md:gap-4">
-         <Link href="/authentication/signup" ><button className="px-2 py-1 bg-header-button-1 text-white rounded-lg hover:bg-blue-600 bg-opacity-10 text-xs lg:text-sm ">Sign up</button></Link> 
-        <Link href="/authentication/signin" ><button className="px-2 py-1 bg-header-button-2 text-black rounded-lg hover:bg-gray-600 text-xs lg:text-sm ">Sign in</button></Link>  
+         <Link href="/authentication/signup" ><button className="px-2 py-1 bg-header-button-1 text-white rounded-lg hover:bg-blue-600 bg-opacity-10 text-xs lg:text-sm  transition-all hover:scale-[1.05] active:scale-[1.03] ">Sign up</button></Link> 
+        <Link href="/authentication/signin" ><button className="px-2 py-1 bg-header-button-2 text-black rounded-lg text-xs lg:text-sm  transition-all hover:scale-[1.05] active:scale-[1.03] ">Sign in</button></Link>  
         </div>
       </div>
     </header>

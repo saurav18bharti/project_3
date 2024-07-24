@@ -38,7 +38,7 @@ const ChooseAccountType = () => {
     
 
 
-      <Link href="/authentication/account-info" className='w-full'><button className="text-sm bg-header-button-2 py-3   max-w-2xl min-w-72 w-full rounded-xl  flex justify-center items-center gap-1  transition   hover:bg-violet-300 hover:font-semibold shadow-sm shadow-black">submit <MdKeyboardArrowRight className='h-5 w-5 text-gray-500'/></button></Link>
+      <Link href="/authentication/account-info" className='w-full'><button className="text-sm bg-header-button-2 py-3   max-w-2xl min-w-72 w-full rounded-xl  flex justify-center items-center gap-1  transition-all   hover:bg-violet-300 hover:font-semibold shadow-sm shadow-black hover:scale-[1.03] active:scale-[1.05] ">submit <MdKeyboardArrowRight className='h-5 w-5 text-gray-500'/></button></Link>
   </div>
         </div>
     

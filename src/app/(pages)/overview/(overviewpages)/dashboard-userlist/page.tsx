@@ -4,21 +4,16 @@ import React, { useState } from "react";
 import MenuBar from "../../component/MenuBar";
 import FilterBar from "../../component/FilterBar";
 import PaginatedTable from "../../component/PaginatedTable";
-import { NextUiTable } from "../../component/Table";
-import { DatePicker, Input } from "@nextui-org/react";
-
-import { FaUser } from "react-icons/fa";
-import { Plus, X } from "lucide-react";
-import Modal from "../../component/Modal";
 import Image from "next/image";
 import NewUserCard from "../../component/NewUserCard";
+import { NextUiTable } from "../../component/NextUiTable";
 
 const List1 = () => {
   const [showmodal, setShowmodal] = useState<boolean>(false);
   const [view, setView] = useState<boolean>(false);
 
   if (showmodal) {
-    return <NewUserCard showmodal={showmodal} setShowmodal={setShowmodal} />
+    return <NewUserCard showmodal={showmodal} setShowmodal={setShowmodal} />;
   }
 
   return (
@@ -26,7 +21,7 @@ const List1 = () => {
       <MenuBar view={view} setView={setView} />
       <FilterBar showmodal={showmodal} setShowmodal={setShowmodal} />
       {view ? (
-        <div className="flex flex-wrap gap-4">
+        <div className="flex justify-between items-center flex-grow flex-wrap gap-4">
           {ALLIMAGES.map((item, index) => (
             <div key={index}>
               <Image

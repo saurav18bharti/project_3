@@ -98,38 +98,38 @@ export const OverviewLeftPart = () => {
           <p className="text-white ">ByeWind</p>
         </div>
         <div>
-          <div className="text-card_text_color  text-xs flex gap-4 ml-3">
+          <div className="text-card_text_color   flex gap-4 ml-3">
             <p className="hover:text-slate-300">Favourites</p>
             <p className="hover:text-slate-300 ">Recently</p>
           </div>
-          <ul className="list-disc custom_disc_color text-white px-8 py-4 flex flex-col gap-5 text-sm ">
+          <ul className="list-disc custom_disc_color text-white px-8 py-4 flex flex-col gap-5  ">
             <li className={greyafterhover}>Overview</li>
             <li className={greyafterhover}>Projects</li>
           </ul>
         </div>
         <div>
-          <p className="text-card_text_color text-xs hover:text-slate-300 ml-3">
+          <p className="text-card_text_color hover:text-slate-300 ml-3">
             Dashboards
           </p>
           <div>
-            <Link href="/overview/dashboard-nodate">
+            <Link href="/overview">
               <div
                 className={cn(
                   greyafterhover,
-                  "flex items-center gap-4 px-8 bg-apple_google-bg-color bg-opacity-10 py-1 rounded-xl my-4  text-white pr-12"
+                  "flex items-center gap-4 px-8 bg-apple_google-bg-color bg-opacity-10 py-1 rounded-xl my-4 hover:text-white  text-white pr-12 hover:scale-[1.05] active:scale-[1.03] cursor-pointer transition-all"
                 )}
               >
-                <PiChartPieSliceFill className="h-8" />
+                <PiChartPieSliceFill className="h-9" />
                 <h1>Overview</h1>
               </div>
             </Link>
-            <ul className="flex flex-col gap-5 text-sm">
+            <ul className="flex flex-col gap-3">
               <Link href="/overview/dashboard-eCommerce">
               
               <li
                 className={cn(
                   greyafterhover,
-                  "flex items-center gap-2 text-white"
+                  "flex items-center gap-2 hover:text-white hover:scale-[1.05] active:scale-[1.03] cursor-pointer transition-all hover:bg-overviewBorderColor p-2 rounded-xl"
                 )}
               >
                 <ChevronRight className="h-5 text-card_text_color " />
@@ -138,9 +138,7 @@ export const OverviewLeftPart = () => {
               </Link>
               <Link href="/overview/dashboard-projects">
                 <li
-                  className="
-                 
-                  flex items-center gap-2 text-white cursor-pointer transition  hover:duration-500 hover:text-gray-400"
+                  className={cn(greyafterhover,"flex items-center gap-2 text-white cursor-pointer hover:scale-[1.03] active:scale-[1.03]  transition-all hover:duration-500 hover:text-white hover:bg-overviewBorderColor p-2 rounded-xl")}
                 >
                   <ChevronRight className="h-5 text-card_text_color" />
                   <FolderClosed className="h-5" /> Projects
@@ -151,10 +149,10 @@ export const OverviewLeftPart = () => {
               <li
                 className={cn(
                   greyafterhover,
-                  "flex items-center gap-2 text-white"
+                  "flex items-center gap-2 text-white  cursor-pointer transition-all hover:scale-[1.03] active:scale-[1.03]   hover:duration-500 hover:bg-overviewBorderColor p-2 rounded-xl hover:text-white"
                 )}
               >
-                <ChevronRight className="h-5 text-card_text_color" />
+                <ChevronRight className="h-5 text-card_text_color " />
                 <BookOpen className="h-5" /> Online Courses
               </li>
               </Link>
@@ -164,17 +162,17 @@ export const OverviewLeftPart = () => {
         </div>
 
         <div className="flex flex-col gap-4">
-          <p className="text-card_text_color text-xs hover:text-slate-300 ml-3">
+          <p className="text-card_text_color hover:text-slate-300 ml-3">
             Pages
           </p>
-          <ul className="flex flex-col gap-5 text-sm">
+          <ul className="flex flex-col gap-2">
             {items.map((item1) => (
               <>
                 <li
                   key={item1.title}
                   className={cn(
                     greyafterhover,
-                    "flex items-center gap-2 text-white"
+                    "flex items-center gap-2 text-white hover:scale-[1.03] active:scale-[1.03]  transition-all hover:duration-500 hover:text-gray-400 hover:bg-overviewBorderColor p-2 rounded-xl"
                   )}
                   onClick={() => handleList(item1.title)}
                 >

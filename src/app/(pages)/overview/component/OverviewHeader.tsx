@@ -15,33 +15,33 @@ export const OverviewHeader = () => {
             alt="logo"
             width={20}
             height={20}
-            className=""
+            className="hover:scale-[1.05] active:scale-[1.06] transition-all cursor-pointer"
           />
-          <Star className={greyafterhover} />
-          <h1 className={greyafterhover}>Dashboards</h1>
-          <p className={greyafterhover}>/</p>
-          <h1 className={greyafterhover}>Default</h1>
+          <Star className={cn(greyafterhover,"hover:scale-[1.05] active:scale-[1.06] transition-all cursor-pointer")} />
+          <h1 className={cn(greyafterhover,"hover:scale-[1.05] active:scale-[1.06] transition-all cursor-pointer")}>Dashboards</h1>
+          <p className={cn(greyafterhover,"hover:scale-[1.05] active:scale-[1.06] transition-all cursor-pointer")}>/</p>
+          <h1 className={cn(greyafterhover,"hover:scale-[1.05] active:scale-[1.06] transition-all cursor-pointer")}>Default</h1>
         </div>
         <div>
           <div className="flex justify-between items-center gap-4">
             <div className="flex justify-between items-center relative">
-              <Search className="absolute lg:p-1 m-1 text-card_text_color ml-[-20px] lg:ml-0" />
+              <Search className="absolute lg:p-1 m-1 text-card_text_color ml-[-21px] lg:ml-0" />
               <input
                 type="text"
                 placeholder="Search"
-                className="hidden lg:block bg-card-bg-color py-2 pl-7 text-sm rounded-md outline-none text-white placeholder-card_text_color hover:bg-opacity-80 focus:bg-card-bg-color focus:shadow-md focus:shadow-black transition hover:duration-800 "
+                className="hidden lg:block bg-card-bg-color py-2 pl-7 text-sm rounded-md outline-none text-white placeholder-card_text_color hover:bg-opacity-80 focus:bg-card-bg-color transition hover:duration-800 focus:outline-white "
               />
               
             </div>
             <div className=" hidden 2xl:flex justify-between items-center gap-4">
-              <Sun className={greyafterhover} />
+              <Sun className={cn(greyafterhover,"hover:scale-[1.05] active:scale-[1.06] transition-all cursor-pointer")} />
               <Image
                 src="/overview/header/clockcounterclockwise.svg"
                 alt="logo"
                 width={20}
                 height={20}
               />
-              <Bell className={greyafterhover} />
+              <Bell className={cn(greyafterhover,"hover:scale-[1.05] active:scale-[1.06] transition-all cursor-pointer")} />
               <Image
                 src="/overview/header/button.svg"
                 alt="logo"

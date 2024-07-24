@@ -3,25 +3,20 @@ import { maincontentpadding } from "@/utils/constant";
 import React, { useState } from "react";
 import FilterBar from "../../../component/FilterBar";
 import PaginatedTable from "../../../component/PaginatedTable";
-import { NextUiTable } from "../../../component/Table";
-import Modal from "../../../component/Modal";
-import { Plus, X } from "lucide-react";
-import { DatePicker, Input, Textarea } from "@nextui-org/react";
-import { FaUser } from "react-icons/fa";
 import NewUserCard from "../../../component/NewUserCard";
+import { NextUiTable } from "../../../component/NextUiTable";
 
 const OrderList1 = () => {
   const [showmodal, setShowmodal] = useState<boolean>(false);
 
   if (showmodal) {
-    return <NewUserCard setShowmodal={setShowmodal} showmodal={showmodal} />
+    return <NewUserCard setShowmodal={setShowmodal} showmodal={showmodal} />;
   }
 
   return (
     <div className={maincontentpadding}>
       <h1 className="text-white font-semibold">Order List</h1>
       <FilterBar showmodal={showmodal} setShowmodal={setShowmodal} />
-      
       <PaginatedTable
         data={ALLORDERS}
         itemsPerPage={4}

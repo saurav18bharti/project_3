@@ -52,8 +52,8 @@ const BarGraph = ({
           }}
           barSize={barSize}
         >
-          <XAxis className="text-xs md:text-base" dataKey="name" />
-          <YAxis className="text-xs md:text-base"  tickFormatter={(value) => zeroFormatter(value)} />
+          <XAxis className="text-xs " dataKey="name" />
+          <YAxis className="text-xs "  tickFormatter={(value) => zeroFormatter(value)} />
           <Tooltip shared={false} trigger="click" />
           <Bar dataKey={dataKey} fill={fill} />
         </BarChart>

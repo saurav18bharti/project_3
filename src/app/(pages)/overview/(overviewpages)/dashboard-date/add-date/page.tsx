@@ -23,7 +23,7 @@ const DashboardNodate = () => {
 
         <h1 className="text-2xl text-white font-normal">You may need</h1>
 
-        <div className="flex gap-1 bg-blue_text_color px-3 py-2 text-sm font-normal rounded-xl">
+        <div className="flex gap-1 bg-blue_text_color px-3 py-2 text-base font-normal rounded-xl">
             <Plus className=" h-5"/>
             <button>Add date</button>
         </div>

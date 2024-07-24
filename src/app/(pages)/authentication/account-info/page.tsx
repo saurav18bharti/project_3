@@ -1,4 +1,4 @@
-import {  Radio, RadioGroup } from "@nextui-org/react";
+import { Radio, RadioGroup } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
@@ -12,7 +12,7 @@ import { PreContinueButton } from "@/app/component/Button";
 
 export default function AccountInfo() {
   return (
-    <div className={cn(app_style ," py-9 sm:py-12 mx-4  my-10 md:mx-auto") }>
+    <div className={cn(app_style, " py-9 sm:py-12 mx-4  my-10 md:mx-auto")}>
       <div className="max-w-[28rem]">
         <div className="flex flex-col justify-center items-center gap-2">
           <h1 className="text-lg md:text-xl xl:text-3xl 2xl:text-2xl font-semibold text-white">
@@ -30,18 +30,10 @@ export default function AccountInfo() {
               Specify Team Size
             </h1>
             <div className="flex gap-3 text-white font-normal text-sm">
-              <p className={account_info_specify_team}>
-                1-1
-              </p>
-              <p className={account_info_specify_team}>
-                2-10
-              </p>
-              <p className={account_info_specify_team}>
-                10-15
-              </p>
-              <p className={account_info_specify_team}>
-                50+
-              </p>
+              <p className={account_info_specify_team}>1-1</p>
+              <p className={account_info_specify_team}>2-10</p>
+              <p className={account_info_specify_team}>10-15</p>
+              <p className={account_info_specify_team}>50+</p>
             </div>
             <p className="text-xs md:text-sm text-card_text_color opacity-70">
               Customers will see this shortened version of your statement
@@ -92,7 +84,10 @@ export default function AccountInfo() {
           </RadioGroup>
         </div>
 
-        <PreContinueButton onContinue="/authentication/billing-details" previous="/authentication/choose-account-type"/>
+        <PreContinueButton
+          onContinue="/authentication/billing-details"
+          previous="/authentication/choose-account-type"
+        />
       </div>
     </div>
   );
