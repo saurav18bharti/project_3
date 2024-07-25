@@ -22,7 +22,7 @@ const DashboardEcommerce = () => {
         <BarGraph
           data={DEVICEDATA}
           title="Projection vs Actuals"
-          customwidth={660}
+          customwidth="100%"
           customheight={220}
           barSize={32}
           fill="#82ca9d"

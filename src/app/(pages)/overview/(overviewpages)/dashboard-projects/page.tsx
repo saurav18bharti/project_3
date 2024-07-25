@@ -33,7 +33,7 @@ const DashboardProjects = () => {
       <BarGraph
         data={DEVICEDATA}
         title="Tasks Overview"
-        customwidth={1295}
+        customwidth="100%"
         customheight={340}
         barSize={40}
         fill="#82ca9d"

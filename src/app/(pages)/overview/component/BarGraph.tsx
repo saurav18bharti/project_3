@@ -33,7 +33,7 @@ const BarGraph = ({
   title,
   customwidth ,
   customheight,
-  barSize = 40,
+  barSize = 23,
   dataKey = "value",
   fill = "#82ca9d",
   className,
@@ -41,16 +41,13 @@ const BarGraph = ({
   return (
     <div className={cn(graphshadow, " w-full flex flex-col justify-between", className)}>
       <h1 className="text-white font-semibold mb-8">{title}</h1>
-      <ResponsiveContainer aspect={customwidth / customheight}>
+      <ResponsiveContainer width={customwidth} height={customheight}>
         <BarChart
           data={data}
-          margin={{
-            top: 10,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
           barSize={barSize}
+          margin={{
+            left:-30
+          }}
         >
           <XAxis className="text-xs " dataKey="name" />
           <YAxis className="text-xs "  tickFormatter={(value) => zeroFormatter(value)} />

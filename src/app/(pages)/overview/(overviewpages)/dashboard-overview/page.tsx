@@ -123,7 +123,7 @@ const DashboardOverview = () => {
             data={DEVICEDATA}
             title="Traffic by Device"
             customwidth="100%"
-            customheight={370}
+            customheight={250}
             barSize={40}
             fill="#82ca9d"
           />

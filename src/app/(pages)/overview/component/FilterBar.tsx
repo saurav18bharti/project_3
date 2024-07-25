@@ -15,7 +15,7 @@ const FilterBar = ({showmodal,setShowmodal}:FilterBarProps) => {
           <ArrowDownUp className="text-white hover:text-card_text_color cursor-pointer" />
         </div>
         <div className="flex justify-between items-center relative px-4">
-          <Search className="absolute p-1 m-1 ml-[-20px] md:m-0 text-card_text_color" />
+          <Search className="absolute p-1  ml-[-18px] md:m-1 text-card_text_color" />
           <input
             type="text"
             placeholder="Search"
